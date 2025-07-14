@@ -1,11 +1,1 @@
-# Disable directory listing
-Options -Indexes
-
-# Serve index.html by default
-DirectoryIndex index.html
-
-# If you're using pretty URLs or routing manually, this handles that
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+Options +Indexes
