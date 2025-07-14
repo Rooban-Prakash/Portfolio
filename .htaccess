@@ -1,6 +1,11 @@
-# Enable URL Rewriting
+# Disable directory listing
+Options -Indexes
+
+# Serve index.html by default
+DirectoryIndex index.html
+
+# If you're using pretty URLs or routing manually, this handles that
 RewriteEngine On
-# Rewrite rule to redirect requests to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteRule . /index.html [L]
